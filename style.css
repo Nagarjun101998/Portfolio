@@ -1,12 +1,3 @@
-:root{
-	--primary-color-1:#1c2b2d;
-	--primary-color-2:#1f6f8b;
-	--secondary-color-1:#99a8b2;
-	--secondary-color-2:#e6d5b8;
-	--button-color:#09f2ee;
-	--button-color-hover:#008fb3;
-};
-
 .button{
 	cursor: pointer;
 	display: inline-block;
