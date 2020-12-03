@@ -5,30 +5,69 @@
 	--primary-color-2:#1f6f8b;
 	--secondary-color-1:#99a8b2;
 	--secondary-color-2:#e6d5b8;
+	--button-color:#09f2ee;
+	--button-color-hover:#008fb3;
 };
 
 *{
 	box-sizing: border-box;
 	margin:0;
+	font-size: 10px;
 }
 
 body{
 	font-family: 'Roboto', sans-serif;
-		background-color: var(--primary-color-1);
+	background-color:var(--primary-color-1);	
 }
 
-button{
+a{
+	color: #999;
+	text-decoration: none;
+}
+
+.button{
 	cursor: pointer;
-	background-color: var(--secondary-color-2);
-	color: var(--primary-color-2);
-	font-size: 20px;
-	padding: 10px 10px;
+	display: inline-block;
+	color: #000;
+	font-size:1rem ;
 	text-transform: uppercase;
-	letter-spacing: 1px;
-	border-radius: 5px;
+	letter-spacing: .15rem;
+	border-radius: 10rem;
+	padding: .75rem 1.25rem;
+	overflow: hidden;
+	z-index: 1;
+	transition: all .3s;
+	position: relative;
 }
 
-button:hover{
-	background-color: var(--primary-color-1);
-	color:var(--secondary-color-2);
+.button::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--button-color);
+	border-radius: 10rem;
+	z-index: -2;
+}
+
+.button::before{
+	content: '';
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color:var(--button-color-hover) ;
+	border-radius: 10rem;
+	z-index: -1;
+	transition: all .3s;
+}
+
+.button:hover{
+	color:#fff;
+}	
+.button:hover::before{
+	width: 100%;
 }
